@@ -1,0 +1,21 @@
+# Environment
+.env
+myenv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Model files
+*.keras
+*.h5
+*.pth
+
+# Videos
+*.mp4
+
+# Images
+accident_photos/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
