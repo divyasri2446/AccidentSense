@@ -51,33 +51,25 @@ AccidentSense aims to reduce response time by:
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Workflow
 
-Video Input
-↓
-Frame Extraction
-↓
-Image Preprocessing
-↓
-CNN Accident Detection Model
-↓
-Accident Detected?
-├── No → Continue Monitoring
-└── Yes
-↓
-Capture Evidence Image
-↓
-Retrieve GPS Location
-↓
-Convert Coordinates to Address
-↓
-Generate Emergency Alert
-↓
-User Confirmation
-↓
-Emergency Call Support
+```mermaid
+flowchart TD
+    A[Video Input] --> B[Frame Extraction]
+    B --> C[Image Preprocessing]
+    C --> D[CNN Accident Detection Model]
+    D --> E{Accident Detected?}
 
----
+    E -->|No| F[Continue Monitoring]
+    F --> B
+
+    E -->|Yes| G[Capture Evidence Image]
+    G --> H[Retrieve GPS Location]
+    H --> I[Convert Coordinates to Address]
+    I --> J[Generate Emergency Alert]
+    J --> K[User Confirmation]
+    K --> L[Emergency Call Support]
+```
 
 ## 🛠️ Tech Stack
 
